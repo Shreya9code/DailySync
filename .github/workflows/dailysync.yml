@@ -1,8 +1,9 @@
 name: Daily Standup Bot
 on:
   schedule:
-    - cron: "15 9 * * *" #"0 9 * * *" "46 8 * * *"
-  # Runs at 9 AM UTC daily(2:30 PM IST)
+    - cron: "15 9 * * *" #"0 9 * * *" "46 8 * * *"# Runs at 9 AM UTC daily(2:30 PM IST)
+  workflow_dispatch:       # allows manual run from Actions tab
+
 jobs:
   standup:
     runs-on: ubuntu-latest
