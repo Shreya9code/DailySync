@@ -1,7 +1,7 @@
 name: Daily Standup Bot
 on:
   schedule:
-    - cron: 8 9 * * * #"0 9 * * *" "46 8 * * *"
+    - cron: "15 9 * * *" #"0 9 * * *" "46 8 * * *"
   # Runs at 9 AM UTC daily(2:30 PM IST)
 jobs:
   standup:
@@ -19,10 +19,10 @@ jobs:
       - name: Run DailySync
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           REPO_OWNER: ${{ secrets.REPO_OWNER }}
-          GITHUB_REPO: ${{ secrets.GITHUB_REPO }}
+          REPO_NAME: ${{ secrets.REPO_NAME }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
         run: python main.py
