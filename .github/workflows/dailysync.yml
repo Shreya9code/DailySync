@@ -1,7 +1,7 @@
 name: Daily Standup Bot
 on:
   schedule:
-    - cron: "0 9 * * *" #cron: "46 8 * * *"
+    - cron: 8 9 * * * #"0 9 * * *" "46 8 * * *"
   # Runs at 9 AM UTC daily(2:30 PM IST)
 jobs:
   standup:
