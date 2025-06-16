@@ -12,6 +12,11 @@
       "assignee": "Shreya",
       "status": "To Do",
       "due": "2025-06-15"
+    },{
+      "task": "slack summary",
+      "assignee": "Shreya",
+      "status": "To Do",
+      "due": "2025-06-17"
     },
     {
       "task": "Build frontend login screen",
