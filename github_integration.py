@@ -8,7 +8,7 @@ load_dotenv()
 
 NOTION_TOKEN = os.getenv("NOTION_TOKEN")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-GITHUB_OWNER = os.getenv("GITHUB_OWNER")
+REPO_OWNER = os.getenv("REPO_OWNER")
 GITHUB_REPO = os.getenv("GITHUB_REPO").split("/")[-1]
 DATABASE_ID = os.getenv("DATABASE_ID")
 
@@ -24,7 +24,7 @@ headers_github = {
 }
 
 def get_recent_commits():
-    url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/commits"
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{GITHUB_REPO}/commits"
     response = requests.get(url, headers=headers_github)
     if response.status_code == 200:
         return response.json()

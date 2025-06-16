@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GITHUB_OWNER: ${{ secrets.GITHUB_OWNER }}
+          REPO_OWNER: ${{ secrets.REPO_OWNER }}
           GITHUB_REPO: ${{ secrets.GITHUB_REPO }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
         run: python main.py

@@ -32,7 +32,7 @@ def get_user_mapping(github_username=None, notion_name=None):
 
 def fetch_github_commits():
     """Get commits from last 24 hours grouped by user"""
-    url = f"https://api.github.com/repos/{os.getenv('GITHUB_OWNER')}/{os.getenv('GITHUB_REPO')}/commits"
+    url = f"https://api.github.com/repos/{os.getenv('REPO_OWNER')}/{os.getenv('GITHUB_REPO')}/commits"
     since_date = (datetime.now() - timedelta(hours=24)).isoformat()
     params = {'since': since_date}
     
